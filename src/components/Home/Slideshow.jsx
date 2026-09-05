@@ -45,6 +45,7 @@ const Slideshow = () => {
   const [previousSlide, setPreviousSlide] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [clicked, setClicked] = useState(false)
   
   const prevSlide = () => {
     if (isTransitioning) return
@@ -98,18 +99,25 @@ const Slideshow = () => {
     <div className="flex flex-row justify-center items-center pt-22">
 
       <ChevronLeft
-        className="
+        className={`
           w-13 h-auto
           p-2
           mr-8
           rounded-full
           border-2 border-gray-200
-          bg-white
+          ${clicked ? 'bg-gray-200' : 'bg-white'}
           shadow-[0_4px_14px_rgba(0,0,0,0.18)]
           hover:shadow-[0_6px_20px_rgba(0,0,0,0.22)]
-          transition-shadow duration-300
-        "
-        onClick={prevSlide}
+          transition-all duration-300
+        `}
+        onClick={() => {
+          prevSlide()
+          setClicked(true)
+
+          setTimeout(() => {
+            setClicked(false)
+          }, 150)
+        }}
       />
 
     <div
@@ -162,18 +170,25 @@ const Slideshow = () => {
       </div>
 
       <ChevronRight
-        className="
+        className={`
           w-13 h-auto
           p-2
           ml-8
           rounded-full
           border-2 border-gray-200
-          bg-white
+          ${clicked ? 'bg-gray-200' : 'bg-white'}
           shadow-[0_4px_14px_rgba(0,0,0,0.18)]
           hover:shadow-[0_6px_20px_rgba(0,0,0,0.22)]
           transition-shadow duration-300
-        "
-        onClick={nextSlide}
+        `}
+        onClick={() => {
+          nextSlide()
+          setClicked(true)
+
+          setTimeout(() => {
+            setClicked(false)
+          }, 150)
+        }}
       />
 
     </div>

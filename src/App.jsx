@@ -1,17 +1,26 @@
 import React from 'react'
-import Home from './components/Home/Home.jsx'
+import { Routes, Route } from 'react-router-dom'
+import Home from './components/Pages/Home.jsx'
 import Driver from './components/Driver/Driver.jsx'
+import Drivers from './components/Pages/Drivers.jsx'
 
 const App = () => {
   return (
     <div >
-      <Home />
-      <Driver />
-      <div className="h-[2000px]">
-        <h1 className="pt-70 text-center text-4xl">
-          Scroll down
-        </h1>
-      </div>
+
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/drivers"
+          element={<Drivers />}
+        />
+
+      </Routes>
     </div>
   )
 }

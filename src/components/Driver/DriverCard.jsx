@@ -10,6 +10,10 @@ const DriverCard = ({ team, driver }) => {
           overflow-hidden
           bg-[#010102]
           shadow-[0_8px_25px_rgba(0,0,0,0.25)]
+          transition-all duration-500
+          hover:-translate-y-2
+          hover:scale-102
+          hover:shadow-[0_14px_35px_rgba(0,0,0,0.35)]
         "
       >
 
