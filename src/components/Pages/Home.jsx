@@ -49,6 +49,7 @@ const Home = () => {
             flex
             items-center
             justify-center
+            overflow-hidden
           "
           style={{
             transform: `translateY(${100 - scrollProgress * 100}%)`

@@ -4,6 +4,7 @@ const teams = [
     teamImage:
       "https://i.pinimg.com/1200x/57/a4/50/57a45086257807913bbee3ace4922f37.jpg",
 
+    color: "#00A19B",
     drivers: [
       {
         name: "George Russell",
@@ -29,6 +30,7 @@ const teams = [
   {
     team: "Ferrari",
     teamImage: "https://i.pinimg.com/236x/1d/35/c4/1d35c4d3b28d72877bb5d3a4b8a7d332.jpg",
+    color: "#FF2800",
 
     drivers: [
       {
@@ -52,6 +54,7 @@ const teams = [
   {
     team: "McLaren",
     teamImage: "https://i.pinimg.com/1200x/22/1f/54/221f54c7e780abfe6ce5bbb7efb06d24.jpg",
+    color: "#FF8000",
 
     drivers: [
       {
@@ -75,6 +78,7 @@ const teams = [
   {
     team: "Red Bull Racing",
     teamImage: "https://i.pinimg.com/1200x/8b/cb/a3/8bcba3bd48edfc7fc2da7f148e6b2850.jpg",
+    color: "#001E3C",
 
     drivers: [
       {
@@ -97,6 +101,7 @@ const teams = [
   {
     team: "Aston Martin",
     teamImage: "https://i.pinimg.com/1200x/16/6d/0e/166d0ef16da67c575c35a6fa6559e0df.jpg",
+    color: "#01655C",
 
     drivers: [
       {
@@ -119,6 +124,7 @@ const teams = [
   {
     team: "Williams",
     teamImage: "https://i.pinimg.com/736x/87/94/3e/87943e0a127de489b4e8ef343966913f.jpg",
+    color: "#3267D4",
 
     drivers: [
       {
@@ -141,6 +147,7 @@ const teams = [
   {
     team: "Haas F1 Team",
     teamImage: "https://i.pinimg.com/1200x/92/fd/43/92fd431a41b0fadeee14fd11702680cb.jpg",
+    color: "#E6002B",
 
     drivers: [
       {
@@ -164,6 +171,7 @@ const teams = [
   {
     team: "Audi",
     teamImage: "https://i.pinimg.com/736x/b0/f7/eb/b0f7eb6e9c6d5923a044bf4bfa9bcd68.jpg",
+    color: "#F50537",
 
     drivers: [
       {
@@ -186,6 +194,7 @@ const teams = [
   {
     team: "Alpine",
     teamImage: "https://i.pinimg.com/1200x/89/65/2d/89652d94b80ad8d9bf6a59b2be5210d7.jpg",
+    color: "#EC0374",
 
     drivers: [
       {
@@ -208,6 +217,7 @@ const teams = [
   {
     team: "Racing Bulls",
     teamImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwFR7dI6Ef7gPwlvIe5_-sQDMWH85CZuNUnZmjXMCISui96oZfREatm1fv&s=10",
+    color: "#FFFFFF",
 
     drivers: [
       {
@@ -231,6 +241,7 @@ const teams = [
   {
     team: "Cadillac",
     teamImage: "https://i.pinimg.com/736x/e1/b0/19/e1b019a03fecbc9d4b3cc3c96ef344b0.jpg",
+    color: "#E5E5E5",
 
     drivers: [
       {

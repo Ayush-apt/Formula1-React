@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const TeamCard = () => {
+const TeamCard = ({ team }) => {
 
     const [rotation, setRotation] = useState({
         x: 0,
@@ -59,8 +59,7 @@ const TeamCard = () => {
         flex flex-col
         justify-center items-center
 
-        h-60 w-90
-        bg-[#00A19B]
+        h-72 w-[420px]
         rounded-2xl
 
         transition-transform
@@ -68,10 +67,11 @@ const TeamCard = () => {
         ease-out
 
         [transform-style:preserve-3d]
-
-        shadow-[0_10px_35px_rgba(0,161,155,0.30)]
         "
         style={{
+            backgroundColor: team.color,
+            boxShadow: `0 10px 35px ${team.color}4D`,
+
             transform: `
             perspective(800px)
             rotateX(${rotation.x}deg)
@@ -89,8 +89,8 @@ const TeamCard = () => {
             p-1
             [transform:translateZ(20px)]
         "
-        src="https://i.pinimg.com/1200x/57/a4/50/57a45086257807913bbee3ace4922f37.jpg"
-        alt="Mercedes"
+        src={team.teamImage}
+        alt={team.team}
         />
 
         {/* Team Name */}
@@ -103,7 +103,7 @@ const TeamCard = () => {
             [transform:translateZ(12px)]
           "
         >
-          Mercedes
+          {team.team}
         </h2>
 
 
@@ -127,8 +127,8 @@ const TeamCard = () => {
                 border-2 border-white
                 rounded-full
               "
-              src="https://i.pinimg.com/736x/d7/d0/41/d7d041eb12b37c510ea4cb73d0122a77.jpg"
-              alt="George Russell"
+              src={team.drivers[0].image}
+              alt={team.drivers[0].name}
             />
 
             <h3
@@ -139,7 +139,10 @@ const TeamCard = () => {
                 cursor-pointer
             "
             >
-                George <span className="font-medium">Russell</span>
+                {team.drivers[1].name.split(" ")[0]}{" "}
+                <span className="font-medium">
+                  {team.drivers[1].name.split(" ")[1]}
+                </span>
             </h3>
 
           </div>
@@ -158,8 +161,8 @@ const TeamCard = () => {
                 border-2 border-white
                 rounded-full
               "
-              src="https://i.pinimg.com/736x/11/16/f9/1116f9d030c685acf36dc3b90e7b510e.jpg"
-              alt="Kimi Antonelli"
+              src={team.drivers[1].image}
+              alt={team.drivers[1].name}
             />
 
             <h3
@@ -170,7 +173,10 @@ const TeamCard = () => {
                 cursor-pointer
             "
             >
-                Kimi <span className="font-medium">Antonelli</span>
+                  {team.drivers[1].name.split(" ")[0]}{" "}
+                  <span className="font-medium">
+                    {team.drivers[1].name.split(" ")[1]}
+                  </span>
             </h3>
 
           </div>
