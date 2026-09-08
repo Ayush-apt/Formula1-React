@@ -1,8 +1,8 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/Pages/Home.jsx'
-import Driver from './components/Driver/Driver.jsx'
 import Drivers from './components/Pages/Drivers.jsx'
+import Footer from './components/Pages/Footer.jsx'
 
 const App = () => {
   return (
@@ -21,6 +21,7 @@ const App = () => {
         />
 
       </Routes>
+      <Footer />
     </div>
   )
 }

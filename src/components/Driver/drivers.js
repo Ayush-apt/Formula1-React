@@ -30,7 +30,7 @@ const teams = [
   {
     team: "Ferrari",
     teamImage: "https://i.pinimg.com/236x/1d/35/c4/1d35c4d3b28d72877bb5d3a4b8a7d332.jpg",
-    color: "#FF2800",
+    color: "#E42528",
 
     drivers: [
       {
@@ -145,6 +145,29 @@ const teams = [
   },
 
   {
+    team: "Alpine",
+    teamImage: "https://i.pinimg.com/1200x/89/65/2d/89652d94b80ad8d9bf6a59b2be5210d7.jpg",
+    color: "#EC0374",
+    
+    drivers: [
+      {
+        name: "Pierre Gasly",
+        nationality: "France",
+        flag: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/250px-Flag_of_France.svg.png",
+        image: "https://i.pinimg.com/736x/17/09/8f/17098f2999536f17f9fd14e30df1f07b.jpg",
+        number: 10,
+      },
+      {
+        name: "Franco Colapinto",
+        nationality: "Argentina",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png",
+        image: "https://i.pinimg.com/736x/3d/87/02/3d870208fd618c293d78bfce5bc8f195.jpg",
+        number: 43,
+      },
+    ],
+  },
+  
+  {
     team: "Haas F1 Team",
     teamImage: "https://i.pinimg.com/1200x/92/fd/43/92fd431a41b0fadeee14fd11702680cb.jpg",
     color: "#E6002B",
@@ -167,7 +190,7 @@ const teams = [
       },
     ],
   },
-
+  
   {
     team: "Audi",
     teamImage: "https://i.pinimg.com/736x/b0/f7/eb/b0f7eb6e9c6d5923a044bf4bfa9bcd68.jpg",
@@ -192,32 +215,9 @@ const teams = [
   },
 
   {
-    team: "Alpine",
-    teamImage: "https://i.pinimg.com/1200x/89/65/2d/89652d94b80ad8d9bf6a59b2be5210d7.jpg",
-    color: "#EC0374",
-
-    drivers: [
-      {
-        name: "Pierre Gasly",
-        nationality: "France",
-        flag: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/250px-Flag_of_France.svg.png",
-        image: "https://i.pinimg.com/736x/17/09/8f/17098f2999536f17f9fd14e30df1f07b.jpg",
-        number: 10,
-      },
-      {
-        name: "Franco Colapinto",
-        nationality: "Argentina",
-        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png",
-        image: "https://i.pinimg.com/736x/3d/87/02/3d870208fd618c293d78bfce5bc8f195.jpg",
-        number: 43,
-      },
-    ],
-  },
-
-  {
     team: "Racing Bulls",
     teamImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwFR7dI6Ef7gPwlvIe5_-sQDMWH85CZuNUnZmjXMCISui96oZfREatm1fv&s=10",
-    color: "#FFFFFF",
+    color: "#6C98FF",
 
     drivers: [
       {
@@ -241,7 +241,7 @@ const teams = [
   {
     team: "Cadillac",
     teamImage: "https://i.pinimg.com/736x/e1/b0/19/e1b019a03fecbc9d4b3cc3c96ef344b0.jpg",
-    color: "#E5E5E5",
+    color: "#984961 ",
 
     drivers: [
       {

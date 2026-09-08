@@ -7,15 +7,25 @@ const Team = () => {
     <div className="
       grid
       grid-cols-2
-      gap-
+      gap-10
       justify-items-center
     ">
-      {teams.map((team) => (
-        <TeamCard
+
+      {teams.map((team, index) => (
+        <div
           key={team.team}
-          team={team}
-        />
+          className={
+            index === teams.length - 1
+              ? "col-span-2"
+              : ""
+          }
+        >
+          <TeamCard
+            team={team}
+          />
+        </div>
       ))}
+
     </div>
   )
 }

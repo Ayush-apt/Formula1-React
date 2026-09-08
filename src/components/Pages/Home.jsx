@@ -1,64 +1,59 @@
-import React, { useState, useEffect } from 'react'
-import Slideshow from "../Home/Slideshow";
-import Driver from '../Driver/Driver';
-import Top from '../Home/Top';
-import Teams from './Teams';
+import React from 'react'
+import Slideshow from "../Home/Slideshow"
+import Driver from '../Driver/Driver'
+import Top from '../Home/Top'
+import Teams from './Teams'
 
 const Home = () => {
 
-  const [scrollProgress, setScrollProgress] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-
-      const scrollable =
-        document.documentElement.scrollHeight - window.innerHeight
-
-      const currentScroll = window.scrollY
-
-      const progress = scrollable > 0
-        ? currentScroll / scrollable
-        : 0
-
-      setScrollProgress(progress)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
   return (
     <div>
-        <Top />
-        <Slideshow />
-        <Driver />
 
+      <Top />
 
-        <div className="h-screen">
+      <Slideshow />
 
-        <div
-          className="
-            sticky
-            top-0
-            h-screen
-            bg-black
-            text-white
-            flex
-            items-center
-            justify-center
-            overflow-hidden
-          "
-          style={{
-            transform: `translateY(${100 - scrollProgress * 100}%)`
-          }}
-        >
-          <Teams />
+      <Driver />
+
+      <section className="
+        bg-black
+        text-white
+        py-20
+      ">
+
+        <div className="
+          flex
+          flex-col
+          items-center
+          justify-center
+          mb-12
+        ">
+
+          <h1 className="
+            text-5xl
+            font-bold
+            underline
+            underline-offset-8
+          ">
+            TEAMS
+          </h1>
+
+          <div className="
+            mt-8
+            h-px
+            w-[80%]
+            bg-gradient-to-r
+            from-transparent
+            via-gray-600
+            to-transparent
+          " />
+
         </div>
 
-        </div>
+        <Teams />
+
+      </section>
+
     </div>
   )
 }

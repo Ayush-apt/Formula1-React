@@ -139,9 +139,9 @@ const TeamCard = ({ team }) => {
                 cursor-pointer
             "
             >
-                {team.drivers[1].name.split(" ")[0]}{" "}
+                {team.drivers[0].name.split(" ")[0]}{" "}
                 <span className="font-medium">
-                  {team.drivers[1].name.split(" ")[1]}
+                  {team.drivers[0].name.split(" ")[1]}
                 </span>
             </h3>
 
