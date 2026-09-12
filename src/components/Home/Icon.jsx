@@ -2,7 +2,7 @@ import React from 'react'
 
 const Icon = () => {
   return (
-    <div>
+    <a href='/'>
         <img
             className="
             absolute
@@ -16,7 +16,7 @@ const Icon = () => {
             src="https://cdn.brandfetch.io/idjfWKGaHd/w/800/h/200/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B"
             alt="F1 logo"
         />
-    </div>
+    </a>
   )
 }
 

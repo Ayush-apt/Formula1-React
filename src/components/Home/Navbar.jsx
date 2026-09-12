@@ -11,8 +11,8 @@ import { Navigation, Menu } from "lucide-react";
 const navItems = [
   { name: "Home", href: "." },
   { name: "Drivers", href: "/drivers" },
-  { name: "Teams", href: "#" },
-  { name: "Cars", href: "#" },
+  { name: "Teams", href: "#teams" },
+  { name: "About", href: "#about" },
 ];
 
 const EXPAND_SCROLL_THRESHOLD = 80;

@@ -3,227 +3,231 @@ import { motion, useReducedMotion } from 'motion/react'
 
 const footerLinks = [
   {
-    label: 'Product',
+    label: 'Formula 1',
     links: [
-      { title: 'Features', href: '#features' },
-      { title: 'Pricing', href: '#pricing' },
-      { title: 'Testimonials', href: '#testimonials' },
-      { title: 'Integration', href: '/' },
+      { title: 'Drivers' },
+      { title: 'Teams' },
+      { title: 'Circuits' },
+      { title: 'Championship' },
     ],
   },
   {
-    label: 'Company',
+    label: 'Racing',
     links: [
-      { title: 'FAQs', href: '/faqs' },
-      { title: 'About Us', href: '/about' },
-      { title: 'Privacy Policy', href: '/privacy' },
-      { title: 'Terms of Services', href: '/terms' },
+      { title: 'Race Calendar' },
+      { title: 'Race Results' },
+      { title: 'Qualifying' },
+      { title: 'Standings' },
     ],
   },
   {
-    label: 'Resources',
+    label: 'Explore',
     links: [
-      { title: 'Blog', href: '/blog' },
-      { title: 'Changelog', href: '/changelog' },
-      { title: 'Brand', href: '/brand' },
-      { title: 'Help', href: '/help' },
+      { title: 'Latest News' },
+      { title: 'Race Highlights' },
+      { title: 'Driver Stats' },
+      { title: 'Team Stats' },
     ],
   },
   {
-    label: 'Social Links',
+    label: 'Social',
     links: [
-      { title: 'Facebook', href: '#' },
-      { title: 'Instagram', href: '#' },
-      { title: 'Youtube', href: '#' },
-      { title: 'LinkedIn', href: '#' },
+      { title: 'Facebook' },
+      { title: 'Instagram' },
+      { title: 'YouTube' },
+      { title: 'LinkedIn' },
     ],
   },
 ]
 
 const Footer = () => {
   return (
-    <footer
-      className="
-        relative
-        w-full
-        bg-black
-        text-white
-        border-t
-        border-white/10
-        rounded-t-[3rem]
-        px-10
-        py-16
-        md:px-16
-        md:py-20
-        lg:px-20
-      "
-    >
+    <div id="about" className="bg-black">
 
-      {/* Top Glow */}
-      <div
+      <footer
         className="
-          absolute
-          top-0
-          left-1/2
-          -translate-x-1/2
-          -translate-y-1/2
-
-          h-40
-          w-[45%]
-
-          rounded-full
-          bg-white/[0.04]
-          blur-3xl
+          relative
+          w-full
+          bg-black
+          text-white
+          border-t
+          border-white/10
+          rounded-t-[3rem]
+          px-10
+          py-16
+          md:px-16
+          md:py-20
+          lg:px-20
         "
-      />
+      >
 
-      {/* Top Line */}
-      <div
-        className="
-          absolute
-          top-0
-          left-1/2
-          -translate-x-1/2
-
-          h-px
-          w-[90%]
-
-          bg-gradient-to-r
-          from-transparent
-          via-white/15
-          to-transparent
-        "
-      />
-
-      <div className="
-        mx-auto
-        max-w-[1400px]
-      ">
-
-        {/* Top Section */}
+        {/* Top Glow */}
         <div
           className="
-            flex
-            flex-col
-            gap-10
+            absolute
+            top-0
+            left-1/2
+            -translate-x-1/2
+            -translate-y-1/2
 
-            lg:flex-row
-            lg:items-start
-            lg:justify-between
+            h-40
+            w-[45%]
+
+            rounded-full
+            bg-white/[0.04]
+            blur-3xl
           "
-        >
+        />
 
-          {/* Logo + Copyright */}
-          <AnimatedContainer className="space-y-8">
+        {/* Top Line */}
+        <div
+          className="
+            absolute
+            top-0
+            left-1/2
+            -translate-x-1/2
 
-            <div
-              className="
-                flex
-                h-10
-                w-10
-                items-center
-                justify-center
+            h-px
+            w-[90%]
 
-                rounded-lg
-                border
-                border-white/30
+            bg-gradient-to-r
+            from-transparent
+            via-white/15
+            to-transparent
+          "
+        />
 
-                text-sm
-                font-semibold
-              "
-            >
-              F1
-            </div>
+        <div className="
+          mx-auto
+          max-w-[1400px]
+        ">
 
-            <p
-              className="
-                text-sm
-                text-white/50
-              "
-            >
-              © {new Date().getFullYear()} Formula 1. All rights reserved.
-            </p>
-
-          </AnimatedContainer>
-
-
-          {/* Links */}
+          {/* Top Section */}
           <div
             className="
-              grid
-              w-full
+              flex
+              flex-col
+              gap-10
 
-              grid-cols-2
-              gap-x-12
-              gap-y-10
-
-              md:grid-cols-4
-              md:gap-x-16
-
-              lg:max-w-[800px]
+              lg:flex-row
+              lg:items-start
+              lg:justify-between
             "
           >
 
-            {footerLinks.map((section, index) => (
-              <AnimatedContainer
-                key={section.label}
-                delay={0.1 + index * 0.1}
+            {/* Logo + Copyright */}
+            <AnimatedContainer className="space-y-8">
+
+              <div
+                className="
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+
+                  rounded-lg
+                  border
+                  border-white/30
+
+                  text-sm
+                  font-semibold
+                "
               >
+                <img src="https://cdn.brandfetch.io/idjfWKGaHd/w/800/h/200/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="" />
+              </div>
 
-                <div>
+              <p
+                className="
+                  text-sm
+                  text-white/50
+                "
+              >
+                © {new Date().getFullYear()} Formula 1. All rights reserved.
+              </p>
 
-                  <h3
-                    className="
-                      text-sm
-                      font-medium
-                      text-white
-                    "
-                  >
-                    {section.label}
-                  </h3>
+            </AnimatedContainer>
 
-                  <ul
-                    className="
-                      mt-5
-                      space-y-3
-                    "
-                  >
 
-                    {section.links.map((link) => (
-                      <li key={link.title}>
+            {/* Links */}
+            <div
+              className="
+                grid
+                w-full
 
-                        <a
-                          href={link.href}
-                          className="
-                            text-sm
-                            text-white/50
+                grid-cols-2
+                gap-x-12
+                gap-y-10
 
-                            transition-colors
-                            duration-300
+                md:grid-cols-4
+                md:gap-x-16
 
-                            hover:text-white
-                          "
-                        >
-                          {link.title}
-                        </a>
+                lg:max-w-[800px]
+              "
+            >
 
-                      </li>
-                    ))}
+              {footerLinks.map((section, index) => (
+                <AnimatedContainer
+                  key={section.label}
+                  delay={0.1 + index * 0.1}
+                >
 
-                  </ul>
+                  <div>
 
-                </div>
+                    <h3
+                      className="
+                        text-sm
+                        font-medium
+                        text-white
+                      "
+                    >
+                      {section.label}
+                    </h3>
 
-              </AnimatedContainer>
-            ))}
+                    <ul
+                      className="
+                        mt-5
+                        space-y-3
+                      "
+                    >
+
+                      {section.links.map((link) => (
+                        <li key={link.title}>
+
+                          <span
+                            className="
+                              text-sm
+                              text-white/50
+
+                              transition-colors
+                              duration-300
+
+                              hover: cursor-pointer
+                              hover:text-white
+                              cursor-default
+                            "
+                          >
+                            {link.title}
+                          </span>
+
+                        </li>
+                      ))}
+
+                    </ul>
+
+                  </div>
+
+                </AnimatedContainer>
+              ))}
+
+            </div>
 
           </div>
 
         </div>
 
-      </div>
-
-    </footer>
+      </footer>
+    </div>
   )
 }
 

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { hover } from 'framer-motion'
 
 const slides = [
   {
@@ -45,7 +44,8 @@ const Slideshow = () => {
   const [previousSlide, setPreviousSlide] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
-  const [clicked, setClicked] = useState(false)
+  const [leftclicked, setLeftClicked] = useState(false)
+  const [rightclicked, setRightClicked] = useState(false)
   
   const prevSlide = () => {
     if (isTransitioning) return
@@ -105,17 +105,17 @@ const Slideshow = () => {
           mr-8
           rounded-full
           border-2 border-gray-200
-          ${clicked ? 'bg-gray-200' : 'bg-white'}
+          ${leftclicked ? 'bg-gray-200' : 'bg-white'}
           shadow-[0_4px_14px_rgba(0,0,0,0.18)]
           hover:shadow-[0_6px_20px_rgba(0,0,0,0.22)]
           transition-all duration-300
         `}
         onClick={() => {
           prevSlide()
-          setClicked(true)
+          setLeftClicked(true)
 
           setTimeout(() => {
-            setClicked(false)
+            setLeftClicked(false)
           }, 150)
         }}
       />
@@ -123,7 +123,12 @@ const Slideshow = () => {
     <div
       className={`
         relative
-        w-[80%] h-115
+        w-[85%]
+        h-80
+
+        sm:h-96
+        md:h-105
+        lg:h-115
         rounded-4xl
         bg-black
         overflow-hidden
@@ -155,13 +160,44 @@ const Slideshow = () => {
         }}
       />
       
-      <div className="absolute bottom-12 left-12 text-white">
+      <div className="
+        absolute
+        bottom-6
+        left-6
+        right-6
 
-        <h2 className="mb-6 text-4xl font-bold">
+        sm:bottom-8
+        sm:left-8
+        sm:right-8
+
+        md:bottom-10
+        md:left-10
+        md:right-10
+
+        lg:bottom-12
+        lg:left-12
+        lg:right-12
+
+        text-white
+      ">
+
+        <h2 className="
+          mb-3
+          text-2xl
+          sm:text-3xl
+          md:text-4xl
+          font-bold
+        ">
           {slides[currentSlide].title}
         </h2>
 
-        <p className="max-w-xl text-lg font-normal">
+        <p className="
+          max-w-xl
+          text-sm
+          sm:text-base
+          md:text-lg
+          font-normal
+        ">
           {slides[currentSlide].description}
         </p>
 
@@ -176,17 +212,17 @@ const Slideshow = () => {
           ml-8
           rounded-full
           border-2 border-gray-200
-          ${clicked ? 'bg-gray-200' : 'bg-white'}
+          ${rightclicked ? 'bg-gray-200' : 'bg-white'}
           shadow-[0_4px_14px_rgba(0,0,0,0.18)]
           hover:shadow-[0_6px_20px_rgba(0,0,0,0.22)]
           transition-shadow duration-300
         `}
         onClick={() => {
           nextSlide()
-          setClicked(true)
+          setRightClicked(true)
 
           setTimeout(() => {
-            setClicked(false)
+            setRightClicked(false)
           }, 150)
         }}
       />
