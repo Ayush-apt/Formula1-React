@@ -9,10 +9,10 @@ import {
 import { Navigation, Menu } from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "." },
+  { name: "Home", href: "/" },
   { name: "Drivers", href: "/drivers" },
-  { name: "Teams", href: "#teams" },
-  { name: "About", href: "#about" },
+  { name: "Teams", href: "/#teams" },
+  { name: "About", href: "/#about" },
 ];
 
 const EXPAND_SCROLL_THRESHOLD = 80;
@@ -165,10 +165,10 @@ export function Navbar() {
         onClick={handleNavClick}
         className={`
           flex items-center overflow-hidden
-          rounded-full border
-          bg-background/80
+          rounded-full border border-white/10
+          bg-black/40
           shadow-lg
-          backdrop-blur-sm
+          backdrop-blur-md
           h-12
           scale-75 sm:scale-100
           ${!isExpanded ? "cursor-pointer justify-center" : ""}
@@ -177,7 +177,7 @@ export function Navbar() {
         {/* Logo */}
         <motion.div
           variants={logoVariants}
-          className="shrink-0 flex items-center font-semibold pl-4 pr-2"
+          className="shrink-0 flex items-center font-bold pl-4 pr-2 text-white"
         >
           <Navigation className="h-6 w-6" />
         </motion.div>
@@ -196,9 +196,9 @@ export function Navbar() {
               variants={itemVariants}
               onClick={(e) => e.stopPropagation()}
               className="
-                text-sm font-medium
-                text-gray-950
-                hover:text-gray-600
+                text-sm font-bold
+                text-white
+                hover:text-lime-400
                 transition-colors duration-200
                 px-2 py-1
               "
@@ -209,7 +209,7 @@ export function Navbar() {
         </motion.div>
 
         {/* Collapsed Menu Icon */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-white">
           <motion.div
             variants={collapsedIconVariants}
             animate={isExpanded ? "expanded" : "collapsed"}

@@ -5,7 +5,8 @@ const DriverCard = ({ team, driver }) => {
     <div>
       <div
         className="
-          w-[350px]
+          group
+          max-w-[350px]
           rounded-2xl
           overflow-hidden
           bg-[#010102]
@@ -17,16 +18,20 @@ const DriverCard = ({ team, driver }) => {
         "
       >
 
-        <img
-          className="
-            block
-            w-full
-            h-[400px]
-            object-cover
-          "
-          src={driver.image}
-          alt={driver.name}
-        />
+        <div className="overflow-hidden">
+          <img
+            className="
+              block
+              w-full
+              h-[400px]
+              object-cover
+              transition-transform duration-500
+              group-hover:scale-110
+            "
+            src={driver.image}
+            alt={driver.name}
+          />
+        </div>
 
         <div
           className="

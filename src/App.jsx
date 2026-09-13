@@ -6,20 +6,10 @@ import Footer from './components/Pages/Footer.jsx'
 
 const App = () => {
   return (
-    <div >
-
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Routes>
-
-        <Route
-          path="/"
-          element={<Home />}
-        />
-
-        <Route
-          path="/drivers"
-          element={<Drivers />}
-        />
-
+        <Route path="/" element={<Home />} />
+        <Route path="/drivers" element={<Drivers />} />
       </Routes>
       <Footer />
     </div>
