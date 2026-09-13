@@ -59,7 +59,7 @@ const TeamCard = ({ team }) => {
         flex flex-col
         justify-center items-center
 
-        h-72 w-[420px]
+        h-80 w-[500px]
         rounded-2xl
 
         transition-transform
@@ -83,7 +83,7 @@ const TeamCard = ({ team }) => {
         {/* Team Logo */}
         <img
         className="
-            h-20 w-20
+            h-24 w-24
             rounded-full
             border-2 border-white/40
             p-1
@@ -97,7 +97,7 @@ const TeamCard = ({ team }) => {
         <h2
           className="
             mt-2
-            text-2xl
+            text-3xl
             font-bold
             hover:underline
             [transform:translateZ(12px)]
@@ -123,7 +123,7 @@ const TeamCard = ({ team }) => {
 
             <img
               className="
-                h-6 w-6
+                h-8 w-8
                 border-2 border-white
                 rounded-full
               "
@@ -133,7 +133,7 @@ const TeamCard = ({ team }) => {
 
             <h3
             className="
-                text-lg
+                text-xl
                 font-normal
                 hover:underline
                 cursor-pointer
@@ -157,7 +157,7 @@ const TeamCard = ({ team }) => {
 
             <img
               className="
-                h-6 w-6
+                h-8 w-8
                 border-2 border-white
                 rounded-full
               "
@@ -167,7 +167,7 @@ const TeamCard = ({ team }) => {
 
             <h3
             className="
-                text-lg
+                text-xl
                 font-normal
                 hover:underline
                 cursor-pointer

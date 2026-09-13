@@ -35,8 +35,8 @@ const DriverCard = ({ team, driver }) => {
 
         <div
           className="
-            h-20
-            px-3 py-2
+            h-24
+            px-4 py-3
             bg-[#010102]
             text-white
           "
@@ -47,7 +47,7 @@ const DriverCard = ({ team, driver }) => {
 
                 <img
                   className="
-                    h-6 w-6
+                    h-8 w-8
                     rounded-full
                     border border-white/20
                   "
@@ -57,7 +57,7 @@ const DriverCard = ({ team, driver }) => {
 
                 <h4
                   className="
-                    text-sm
+                    text-base
                     font-medium
                     text-white/70
                   "
@@ -71,7 +71,7 @@ const DriverCard = ({ team, driver }) => {
 
                 <img
                   className="
-                    h-6 w-6
+                    h-8 w-8
                     rounded-full
                     border border-white/20
                   "
@@ -81,7 +81,7 @@ const DriverCard = ({ team, driver }) => {
 
                 <h3
                   className="
-                    text-xl
+                    text-2xl
                     font-bold
                     tracking-wide
                   "
@@ -92,7 +92,7 @@ const DriverCard = ({ team, driver }) => {
               </div>
             </div>
 
-            <div className='text-3xl font-bold'>{driver.number}</div>
+            <div className='text-4xl font-bold'>{driver.number}</div>
           </div>
 
 

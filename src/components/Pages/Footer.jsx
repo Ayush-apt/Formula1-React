@@ -121,8 +121,8 @@ const Footer = () => {
               <div
                 className="
                   flex
-                  h-10
-                  w-10
+                  h-14
+                  w-14
                   items-center
                   justify-center
 
@@ -139,7 +139,7 @@ const Footer = () => {
 
               <p
                 className="
-                  text-sm
+                  text-base
                   text-white/50
                 "
               >
